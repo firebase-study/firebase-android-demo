@@ -5,7 +5,7 @@
 　* 前提条件  
 　* オプション 1: Firebase コンソールを使用して Firebase を追加する 
 
-  2.Firebase 構成ファイルを保存する　　
+  2.Firebase 構成ファイルを保存する  　　
 　　上記でダウンロードしたgoogle-services.jsonファイルを本プロジェクトの[app/]に保存する。  
 
   3.Firebase Authenticationを設定する  
