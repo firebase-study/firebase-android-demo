@@ -21,6 +21,8 @@ import androidx.core.app.NotificationCompat;
 import com.google.firebase.messaging.FirebaseMessagingService;
 import com.google.firebase.messaging.RemoteMessage;
 
+import java.util.Map;
+
 public class MyFirebaseMessagingService extends FirebaseMessagingService{
 
     private static final String TAG = "MyFirebaseMsgService";
@@ -32,7 +34,9 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
 
         Log.d(TAG, "From: " + remoteMessage.getFrom());
 
+        // 通知メッセージの取得と表示
         if (remoteMessage.getNotification() != null) {
+            Log.d(TAG, "Message Notification Title: " + remoteMessage.getNotification().getTitle());
             Log.d(TAG, "Message Notification Body: " + remoteMessage.getNotification().getBody());
             String notificationBody = remoteMessage.getNotification().getBody();
             if (remoteMessage.getNotification().getBody() != null) {
@@ -40,6 +44,14 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
             }
         }
 
+        // データメッセージの取得と表示
+        if (remoteMessage.getData().size() > 0){
+            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
+            Map<String, String> dataMap = remoteMessage.getData();
+            Log.d(TAG, "Message data content: "+ dataMap.get("content"));
+
+        }
+        
     }
 
     @Override
