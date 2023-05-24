@@ -46,7 +46,6 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
 
         // データメッセージの取得と表示
         if (remoteMessage.getData().size() > 0){
-            Log.d(TAG, "Message data payload: " + remoteMessage.getData());
             Map<String, String> dataMap = remoteMessage.getData();
             Log.d(TAG, "Message data content: "+ dataMap.get("content"));
 
