@@ -25,6 +25,8 @@
 　1.アプリを起動する。  
 　2.[Authentication]で追加されたユーザーで[Sign In]、 又は追加されてないユーザーで[Sign Up]  
 　3.データベースのデータを確認する。  
-![ユーザーとデバイストークン情報](app/local/users.png) 
+![ユーザーとデバイストークン情報](app/local/users.png)   
+  4.(spring-boot-firebase-demo)から通知メッセージを受信する。   
+![通知メッセージ情報](app/local/notification.png)    
 
 
