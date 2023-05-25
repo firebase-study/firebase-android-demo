@@ -5,8 +5,8 @@
 　* 前提条件  
 　* オプション 1: Firebase コンソールを使用して Firebase を追加する 
 
-  2.Firebase 構成ファイルを保存する  　　
-　　上記でダウンロードしたgoogle-services.jsonファイルを本プロジェクトの[app/]に保存する。  
+  2.Firebase 構成ファイルを保存する   
+　  上記でダウンロードしたgoogle-services.jsonファイルを本プロジェクトの[app/]に保存する。  
 
   3.Firebase Authenticationを設定する  
 　　* <a href="https://console.firebase.google.com/">Firebase コンソール</a>で、[Authentication] セクションを開く。  
@@ -25,6 +25,6 @@
 　1.アプリを起動する。  
 　2.[Authentication]で追加されたユーザーで[Sign In]、 又は追加されてないユーザーで[Sign Up]  
 　3.データベースのデータを確認する。  
-![ユーザーとデバイストークン情報](app\local\users.png) 
+![ユーザーとデバイストークン情報](app/local/users.png) 
 
 
