@@ -9,15 +9,25 @@ public class User {
 
     public String userName;
     public String email;
-    public String appInstanceToken;
+    public String deviceToken;
+    public String terminalType;
 
     public User() {
     }
 
-    public User(String userName, String email, String appInstanceToken) {
+    public User(String userName, String email, String deviceToken, String terminalType) {
         this.userName = userName;
         this.email = email;
-        this.appInstanceToken = appInstanceToken;
+        this.deviceToken = deviceToken;
+        this.terminalType = terminalType;
+    }
+
+    public String getDeviceToken() {
+        return deviceToken;
+    }
+
+    public void setDeviceToken(String deviceToken) {
+        this.deviceToken = deviceToken;
     }
 
     public String getUserName() {
@@ -36,11 +46,5 @@ public class User {
         this.email = email;
     }
 
-    public String getAppInstanceToken() {
-        return appInstanceToken;
-    }
 
-    public void setAppInstanceToken(String appInstanceToken) {
-        this.appInstanceToken = appInstanceToken;
-    }
 }

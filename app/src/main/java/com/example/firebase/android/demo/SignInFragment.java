@@ -147,11 +147,11 @@ public class SignInFragment extends BaseFragment implements View.OnClickListener
                 }
 
                 // Get new FCM registration token
-                String appInstanceToken = task.getResult();
-                String msg = getString(R.string.msg_token_fmt, appInstanceToken);
+                String deviceToken = task.getResult();
+                String msg = getString(R.string.msg_token_fmt, deviceToken);
                 Log.d(TAG, msg);
 
-                writeNewUser(user.getUid(), userName, user.getEmail(), appInstanceToken);
+                writeNewUser(user.getUid(), userName, user.getEmail(), deviceToken);
 
             }
         });
@@ -188,8 +188,8 @@ public class SignInFragment extends BaseFragment implements View.OnClickListener
         return result;
     }
 
-    private void writeNewUser(String userId, String name, String email, String appInstanceToken) {
-        User user = new User(name, email, appInstanceToken);
+    private void writeNewUser(String userId, String name, String email, String deviceToken) {
+        User user = new User(name, email, deviceToken, "02"); // 02: Android
 
         String key = mDatabase.child("users").child(userId).push().getKey();
         mDatabase.child(key).setValue(user);

@@ -74,7 +74,7 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService{
             return;
         }
         String userId = firebaseUser.getUid();
-        User user = new User(userId, firebaseUser.getEmail(), token);
+        User user = new User(userId, firebaseUser.getEmail(), token, "02"); // 02: Android
 
         mDatabase.child("users").child(userId).setValue(user);
     }
