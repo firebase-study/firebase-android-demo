@@ -30,3 +30,15 @@
 ![通知メッセージ情報](app/local/notification.png)    
 
 
+### アプリ起動について設定
+　1.Android SDK 設定：   
+  　パス：File > Settings > Appearance $ Behavior > System Settings > Android SDK  
+  　SDK Platforms: Android 13.0  インストール   
+  　SDK Tools:  Android Auto *,Android Emulator, Android SDK Platform-Tools, Google Play * インストール    
+  2.JDK Location変更 (sun証明書エラーの場合)：   
+  　パス：File > Project Structure > SDK Location   
+  　JDK Location(Gradle Settings): ローカルPCのJDK  
+  3.Device 追加：  
+  　パス：Tools > Device Manager > Create Device    
+      
+  
